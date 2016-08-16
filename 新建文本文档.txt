@@ -1,0 +1,108 @@
+双随机
+录入-->execl导入
+抽查时间
+做完任务
+公司名称必须一致，要是不同，进行提示
+季度，时间显示检查
+1次都没抽查都要讨论
+
+导入
+
+队员只要时间确定了，直接过
+
+污染源有这张单子，说明任务完成
+
+代办事项：
+平板的任务提醒
+告诉队员什么时候做
+平台的是对其进行确认
+http://localhost:8081/backend/pda/letters/list_list.action?search.currentPage=1
+
+http://localhost:8081/backend/pda/item/manage/viewnotify_notify.action?noticeid=&isNoticeEditable=&examineId=26571
+
+静安网站平板系统上的责令改正中通知书的打印控制
+
+静安网站平板系统上的责令改正同时打印两份通知书和一份回执单
+
+静安网站平板系统上违法行为告知书打印两份的控制
+
+配合测试人员对之前的打印进行测试提交
+
+平板上的项目
+//环境投诉的待办事项查询
+select * from (select *,(select count(ID) from xf_letter_image where ORDER_BY=2 and LETTER_ID=f.LETTER_ID) as file_count,   (select count(ID) from ST_TEST_NOTICE where event_id = f.LETTER_ID and event_type = 1) as notice_count    from xf_visit_letter f) t where 1=1  and t.STATUS order by cast(t.LETTER_YEAR as int) desc , cast(t.LETTER_NUM as   int) desc  
+//专项行动的待办事项查询
+
+//双随机抽查的待办查询
+
+//竣工验收的待办查询(表:tb_examine_item)
+字段：EXAMINE_ID,ITEM_APPLY_YEAR,ITEM_APPLY_NUM,ITEM_NAME,ITEM_KIND,CONSTRUCT_ADRESS,CONSTRUCT_POSTAL_CODE,CONSTRUCT_UNIT,SUPERIOR_DEPT,JURIDICAL_PERSON,UNIT_KIND,VOCATION_KIND,CONTACT_ADRESS,CONTACT_ADRESS_POST,CONTACT_PERSON,CONTACT_PHONE,ITEM_TOTAL_INVEST,ENTIRONMENT_INVEST,BUILD_AREA,TERRA_AREA,EXPECT_OPERATION_DATE,EXAMINE_INFORMATION,CHECK_INFORMATION,IS_VALIDITY,IS_DELETE,build_Properties,EXAMINE_COMPANY,TRADE_year,TRADE_NAME,accept_num,ITEM_REGISTRATION_YEAR,LOG_ID,ITEM_PIWENHAO,ITEM_HUANPINGPIWENHAO,ITEM_SHENPIWENHAO,ITEM_SHENPIRIQI,ITEM_SHENPILEIXING,ITEM_CHENBANRENYUAN,CHECK_PERSON,CHECK_DATE,CHECK_NUM,ITEM_HUANPINGPIWENRIQI,EXAMINE_TYPE,EXAMINE_ALLNUM,CHECK_TYPE,CHECK_ALLNUM,ENTERPRISE_ID,EXAMINE_STATUS,APPLY_ITEM,LONGITUDE,LATITUDE,TRADECAT,HPFEE,COMPOSEDATE,XUKENO,VERIFYUSER,JIEZHEN,SGSTARTDATE,SGENDDATE,APPROVTYPE,check_send_status,check_reply_status,INSPECTREQUIRE_1,trialRunRequire,INSPECTREQUIRE
+
+  examineId=<null>
+  itemApplyYear=
+  itemApplyNum=
+  itemName=
+  itemKind=
+  constructAdress=
+  constructPostalCode=<null>
+  constructUnit=
+  superiorDept=<null>
+  juridicalPerson=<null>
+  unitKind=<null>
+  vocationKind=<null>
+  contactAdress=<null>
+  contactAdressPost=<null>
+  contactPerson=<null>
+  contactPhone=<null>
+  itemTotalInvest=<null>
+  entironmentInvest=<null>
+  buildArea=<null>
+  terraArea=<null>
+  expectOperationDate=<null>
+  isValidity=<null>
+  isDelete=<null>
+  examineInformation=<null>
+  checkInformation=<null>
+  itemShenpiwenhao=<null>
+  noticeType=<null>
+  superviseName=<null>
+  examineStatus=6
+  sendStatus=2
+  recieveStatus=<null>
+  piwenNo=<null>
+  rowsPerPage=10
+  currentPage=1
+  start=0
+  end=0
+  myStart=-1
+  myEnd=-1
+  totalRecords=-1
+  totalPages=0
+  columnName=<null>
+  operateType=0
+  orderClause=<null>
+  sysUserId=-1
+  beginDate=<null>
+  endDate=<null>
+
+1、双随机
+确认时间表：时间为上午、下午
+加一列：联动监测（是否监测）
+双随机监测统计--》当月监测配合名单，可导出word
+2、待办事项：
+3、询问笔录
+与本案关系，身份证号码
+
+
+
+
+
+
+
+
+
+
+
+
+
+
